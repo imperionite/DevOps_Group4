@@ -6,6 +6,7 @@ BrainBytes is an AI-powered tutoring platform designed to provide accessible aca
 ## Team Members
 - Roxane Myles Andrade - Team Lead - lr.rmandrade@mmdc.mcl.edu.ph
 - Arnel Imperial  - Backend Developer - lr.aimperial@mmdc.mcl.edu.ph
+- Emersson Aporado - Backend Developer - lr.eaporado@mmdc.mcl.edu.ph
 - Monina Angela Patiño - Frontend Developer - lr.mapatino@mmdc.mcl.edu.ph
 - Rick Cabugnason - DevOps Engineer - lr.rcabugnason@mmdc.mcl.edu.ph
 

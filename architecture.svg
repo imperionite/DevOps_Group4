@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <style>
+      .title { font: 600 22px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #0f172a; }
+      .label { font: 14px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #0f172a; }
+      .small { font: 12px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #334155; }
+      .box { fill: #ffffff; stroke: #1f2937; stroke-width: 2; rx: 14; ry: 14; }
+      .cloud { fill: #f8fafc; stroke: #1f2937; stroke-width: 2; rx: 18; ry: 18; }
+      .arrow { stroke: #0f172a; stroke-width: 2.5; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#0f172a"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="30" width="1120" height="640" class="cloud"/>
+  <text x="70" y="70" class="title">BrainBytes (Planned Container Architecture)</text>
+  <text x="70" y="98" class="small">Frontend: Next.js · Backend: Node.js API · Database: MongoDB Atlas · Optional: LLM API</text>
+
+  <rect x="80" y="170" width="240" height="120" class="box"/>
+  <text x="110" y="205" class="label">User Browser</text>
+  <text x="110" y="232" class="small">HTTPS</text>
+
+  <rect x="410" y="140" width="320" height="180" class="box"/>
+  <text x="440" y="178" class="label">Frontend Container</text>
+  <text x="440" y="205" class="small">Next.js (web)</text>
+  <text x="440" y="232" class="small">Port: 3000</text>
+  <text x="440" y="259" class="small">Build: Dockerfile</text>
+
+  <rect x="410" y="380" width="320" height="190" class="box"/>
+  <text x="440" y="418" class="label">Backend Container</text>
+  <text x="440" y="445" class="small">Node.js API (REST)</text>
+  <text x="440" y="472" class="small">Port: 4000</text>
+  <text x="440" y="499" class="small">Network: internal bridge</text>
+
+  <rect x="840" y="390" width="290" height="170" class="box"/>
+  <text x="870" y="428" class="label">MongoDB Atlas</text>
+  <text x="870" y="455" class="small">Cloud database</text>
+  <text x="870" y="482" class="small">Connection: mongodb+srv://</text>
+  <text x="870" y="509" class="small">Data: users, chats, logs</text>
+
+  <rect x="840" y="150" width="290" height="140" class="box"/>
+  <text x="870" y="188" class="label">LLM / AI Provider</text>
+  <text x="870" y="215" class="small">Optional external API</text>
+  <text x="870" y="242" class="small">Used by backend only</text>
+
+  <path d="M320,230 C360,230 370,230 410,230" class="arrow" marker-end="url(#arrowhead)"/>
+  <text x="340" y="212" class="small">HTTP(S)</text>
+
+  <path d="M570,320 C570,340 570,350 570,380" class="arrow" marker-end="url(#arrowhead)"/>
+  <text x="585" y="355" class="small">API calls</text>
+
+  <path d="M730,475 C770,475 790,475 840,475" class="arrow" marker-end="url(#arrowhead)"/>
+  <text x="745" y="458" class="small">DB queries</text>
+
+  <path d="M730,220 C770,220 790,220 840,220" class="arrow" marker-end="url(#arrowhead)"/>
+  <text x="745" y="203" class="small">LLM requests</text>
+
+  <rect x="80" y="610" width="1050" height="40" fill="#ffffff" opacity="0.9" stroke="#e2e8f0"/>
+  <text x="100" y="637" class="small">Notes: Frontend talks to backend over an internal network; backend connects to MongoDB Atlas and (optionally) an external AI provider.</text>
+</svg>
+

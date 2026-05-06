@@ -24,3 +24,11 @@ BrainBytes is an AI-powered tutoring platform designed to provide accessible aca
 - CI/CD: GitHub Actions
 - Cloud Provider: Oracle Cloud Free Tier
 - Monitoring: Prometheus & Grafana
+
+## Milestone 1 Deliverables
+
+- Environment setup verification: [environment-setup.md](environment-setup.md)
+- Architecture draft: [architecture.svg](architecture.svg)
+- Task distribution plan: [task-distribution-plan.md](task-distribution-plan.md)
+
+![BrainBytes Architecture](architecture.svg)

@@ -6,10 +6,10 @@ This document records the development environment setup status for the BrainByte
 
 | Team Member | Docker Desktop / Rancher | Git | VS Code | Ran `hello-world` | Verified Date |
 |---|---:|---:|---:|---:|---|
-| Roxane Myles Andrade | Yes | Yes | Yes | Yes | 2026-05-07 |
-| Arnel Imperial | Yes | Yes | Yes | Yes | 2026-05-07 |
-| Emersson Aporado | Yes | Yes | Yes | Yes | 2026-05-07 |
-| Monina Angela Patiño | Yes | Yes | Yes | Yes | 2026-05-07 |
+| Roxane Myles Andrade | Pending | Pending | Pending | Pending |  |
+| Arnel Imperial | Pending | Pending | Pending | Pending |  |
+| Emersson Aporado | Pending | Pending | Pending | Pending |  |
+| Monina Angela Patiño | Pending | Pending | Pending | Pending |  |
 | Rick Cabugnason | Yes | Yes | Yes | Yes | 2026-05-07 |
 
 ## Commands Used for Verification
@@ -30,5 +30,5 @@ docker run --rm hello-world
 | Arnel Imperial | _To be filled_ | _To be filled_ |
 | Emersson Aporado | _To be filled_ | _To be filled_ |
 | Monina Angela Patiño | _To be filled_ | _To be filled_ |
-| Rick Cabugnason | _To be filled_ | _To be filled_ |
+| Rick Cabugnason | Docker version 29.4.2, build 055a478 | Docker Compose version v5.1.3 |
 

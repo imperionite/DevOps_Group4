@@ -30,5 +30,6 @@ BrainBytes is an AI-powered tutoring platform designed to provide accessible aca
 - Environment setup verification: [environment-setup.md](environment-setup.md)
 - Architecture draft: [architecture.svg](architecture.svg)
 - Task distribution plan: [task-distribution-plan.md](task-distribution-plan.md)
+- Recording/Documentation (Google Drive): https://drive.google.com/drive/folders/1K-nhVxDYxFYGbroxrv3Yb19M3AAUjHHK?usp=sharing
 
 ![BrainBytes Architecture](architecture.svg)

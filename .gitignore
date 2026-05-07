@@ -1,0 +1,6 @@
+brainbytes-multi-container/**/node_modules/
+brainbytes-multi-container/frontend/.next/
+brainbytes-multi-container/**/npm-debug.log
+brainbytes-multi-container/**/.env
+brainbytes-multi-container/**/.env.*
+

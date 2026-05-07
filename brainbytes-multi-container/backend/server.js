@@ -1,56 +1,62 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
-const port = Number(process.env.PORT) || 3000;
+const PORT = process.env.PORT || 3000;
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-const mongoUri = process.env.MONGODB_URI || "mongodb://mongo:27017/brainbytes";
-
-mongoose
-  .connect(mongoUri)
-  .then(() => {})
-  .catch(() => {});
-
-const messageSchema = new mongoose.Schema(
-  {
-    text: { type: String, required: true, trim: true },
-    createdAt: { type: Date, default: Date.now }
-  },
-  { versionKey: false }
-);
-
-const Message = mongoose.model("Message", messageSchema);
-
-app.get("/", (_req, res) => {
-  res.json({ message: "BrainBytes API is running" });
+// Connect to MongoDB
+mongoose.connect('mongodb://mongo:27017/brainbytes', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  retryWrites: true
+}).then(() => {
+  console.log('Connected to MongoDB');
+}).catch(err => {
+  console.error('Failed to connect to MongoDB:', err);
 });
 
-app.get("/api/messages", async (_req, res) => {
+// Define a simple schema for messages
+const messageSchema = new mongoose.Schema({
+  text: String,
+  createdAt: { type: Date, default: Date.now }
+});
+
+const Message = mongoose.model('Message', messageSchema);
+
+// API Routes
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to the BrainBytes API' });
+});
+
+// Get all messages
+app.get('/api/messages', async (req, res) => {
   try {
-    const messages = await Message.find().sort({ createdAt: -1 }).limit(100);
+    const messages = await Message.find().sort({ createdAt: -1 });
     res.json(messages);
   } catch (err) {
-    res.status(500).json({ error: "Failed to load messages" });
+    res.status(500).json({ error: err.message });
   }
 });
 
-app.post("/api/messages", async (req, res) => {
+// Create a new message
+app.post('/api/messages', async (req, res) => {
   try {
-    const text = typeof req.body?.text === "string" ? req.body.text : "";
-    if (!text.trim()) {
-      res.status(400).json({ error: "Message text is required" });
-      return;
-    }
-    const saved = await new Message({ text }).save();
-    res.status(201).json(saved);
+    const message = new Message({
+      text: req.body.text
+    });
+    const savedMessage = await message.save();
+    res.status(201).json(savedMessage);
   } catch (err) {
-    res.status(400).json({ error: "Failed to save message" });
+    res.status(400).json({ error: err.message });
   }
 });
 
-app.listen(port, () => {});
-
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

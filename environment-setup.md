@@ -9,7 +9,7 @@ This document records the development environment setup status for the BrainByte
 | Roxane Myles Andrade | Pending | Pending | Pending | Pending |  |
 | Arnel Imperial | Pending | Pending | Pending | Pending |  |
 | Emersson Aporado | Pending | Pending | Pending | Pending |  |
-| Monina Angela Patiño | Yes | Yes | Yes | 2026-05-07 | 
+| Monina Angela Patiño | Yes | Yes | Yes | Yes | 2026-05-07 | 
 | Rick Cabugnason | Yes | Yes | Yes | Yes | 2026-05-07 |
 
 ## Commands Used for Verification
